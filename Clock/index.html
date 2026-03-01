@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect Analog Clock</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="clock" id="clock">
+
+        <!-- Numbers -->
+        <div class="number" style="--rotation:30deg"><span>1</span></div>
+        <div class="number" style="--rotation:60deg"><span>2</span></div>
+        <div class="number" style="--rotation:90deg"><span>3</span></div>
+        <div class="number" style="--rotation:120deg"><span>4</span></div>
+        <div class="number" style="--rotation:150deg"><span>5</span></div>
+        <div class="number" style="--rotation:180deg"><span>6</span></div>
+        <div class="number" style="--rotation:210deg"><span>7</span></div>
+        <div class="number" style="--rotation:240deg"><span>8</span></div>
+        <div class="number" style="--rotation:270deg"><span>9</span></div>
+        <div class="number" style="--rotation:300deg"><span>10</span></div>
+        <div class="number" style="--rotation:330deg"><span>11</span></div>
+        <div class="number" style="--rotation:360deg"><span>12</span></div>
+
+        <!-- Hands -->
+        <div class="hand hour" id="hour"></div>
+        <div class="hand minute" id="minute"></div>
+        <div class="hand second" id="second"></div>
+        <div class="center-dot"></div>
+
+    </div>
+
+    <div class="day" id="day"></div>
+    <div class="date" id="date"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
