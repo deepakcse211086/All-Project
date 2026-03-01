@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Toast Notification Example</h1>
+        <button onclick="showToast('This is a success message!', 'success')">Show Success Toast</button>
+        <button onclick="showToast('This is an error message!', 'error')">Show Error Toast</button>
+        <button onclick="showToast('This is a warning message!', 'warning')">Show Warning Toast</button>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
