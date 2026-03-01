@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A K Memorial Hospital</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">A K Memorial Hospital</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="cta-btn">Book Appointment</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero" id="home">
+      <img
+        src="https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg"
+        class="active"
+        alt="Hospital ER"
+      />
+      <img
+        src="https://images.pexels.com/photos/416754/pexels-photo-416754.jpeg"
+        alt="Hospital corridor"
+      />
+      <img
+        src="https://images.pexels.com/photos/853199/pexels-photo-853199.jpeg"
+        alt="Medical staff"
+      />
+    </div>
+
+    <!-- ABOUT US -->
+    <section id="about">
+      <div class="about-content">
+        <div class="about-image">
+          <img
+            src="https://images.pexels.com/photos/3845760/pexels-photo-3845760.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Hospital"
+          />
+        </div>
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            A K Memorial Hospital is dedicated to providing world-class
+            healthcare with compassion and expertise. Our team ensures every
+            patient receives personalized care and advanced treatment in a safe,
+            caring environment.
+          </p>
+          <ul>
+            <li>24/7 Emergency Services</li>
+            <li>Advanced Diagnostics</li>
+            <li>Experienced Specialists</li>
+            <li>Patient-Centered Care</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPARTMENTS -->
+    <section id="departments">
+      <h2>Our Departments</h2>
+      <div class="departments-container">
+        <div class="department">
+          <img
+            src="https://img.icons8.com/ios-filled/50/0077b6/heart-health.png"
+          />
+          <h3>Cardiology</h3>
+        </div>
+        <div class="department">
+          <img src="https://img.icons8.com/ios-filled/50/0077b6/brain.png" />
+          <h3>Neurology</h3>
+        </div>
+        <div class="department">
+          <img src="https://img.icons8.com/ios-filled/50/0077b6/syringe.png" />
+          <h3>Emergency Care</h3>
+        </div>
+        <div class="department">
+          <img src="https://img.icons8.com/ios-filled/50/0077b6/x-ray.png" />
+          <h3>Radiology</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section id="doctors">
+      <h2>Our Doctors</h2>
+      <div class="doctors-container">
+        <div class="doctor">
+          <img
+            src="https://images.pexels.com/photos/5321734/pexels-photo-5321734.jpeg"
+          />
+          <h3>Dr. Amar Singh</h3>
+          <p>Cardiologist</p>
+        </div>
+        <div class="doctor">
+          <img
+            src="https://images.pexels.com/photos/3845760/pexels-photo-3845760.jpeg"
+          />
+          <h3>Dr. Sunita Verma</h3>
+          <p>Neurologist</p>
+        </div>
+        <div class="doctor">
+          <img
+            src="https://images.pexels.com/photos/5473248/pexels-photo-5473248.jpeg"
+          />
+          <h3>Dr. Ravi Patel</h3>
+          <p>Emergency Specialist</p>
+        </div>
+        <div class="doctor">
+          <img
+            src="https://images.pexels.com/photos/3914889/pexels-photo-3914889.jpeg"
+          />
+          <h3>Dr. Pooja Sharma</h3>
+          <p>Radiologist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <h2>Hospital Gallery</h2>
+      <div class="gallery">
+        <script>
+          const galleryImages = [
+            "https://images.pexels.com/photos/6033073/pexels-photo-6033073.jpeg?auto=compress&cs=tinysrgb&w=1200", // hospital exterior
+            "https://images.pexels.com/photos/3845742/pexels-photo-3845742.jpeg?auto=compress&cs=tinysrgb&w=1200", // doctor with patient
+            "https://images.pexels.com/photos/5321734/pexels-photo-5321734.jpeg?auto=compress&cs=tinysrgb&w=1200", // cardiology lab
+            "https://images.pexels.com/photos/5473248/pexels-photo-5473248.jpeg?auto=compress&cs=tinysrgb&w=1200", // emergency room
+            "https://images.pexels.com/photos/3845760/pexels-photo-3845760.jpeg?auto=compress&cs=tinysrgb&w=1200", // hospital entrance
+            "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1200", // operation theater
+            "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200", // patient care
+            "https://images.pexels.com/photos/40568/pexels-photo-40568.jpeg?auto=compress&cs=tinysrgb&w=1200", // consultation
+            "https://images.pexels.com/photos/4225892/pexels-photo-4225892.jpeg?auto=compress&cs=tinysrgb&w=1200", // ward corridor
+            "https://images.pexels.com/photos/3937109/pexels-photo-3937109.jpeg?auto=compress&cs=tinysrgb&w=1200", // medical team discussion
+            "https://images.pexels.com/photos/3993063/pexels-photo-3993063.jpeg?auto=compress&cs=tinysrgb&w=1200", // lab equipment
+            "https://images.pexels.com/photos/3845746/pexels-photo-3845746.jpeg?auto=compress&cs=tinysrgb&w=1200", // nursing interaction
+            "https://images.pexels.com/photos/1170976/pexels-photo-1170976.jpeg?auto=compress&cs=tinysrgb&w=1200", // hospital hallway
+            "https://images.pexels.com/photos/3845752/pexels-photo-3845752.jpeg?auto=compress&cs=tinysrgb&w=1200", // doctor consultation
+            "https://images.pexels.com/photos/4225893/pexels-photo-4225893.jpeg?auto=compress&cs=tinysrgb&w=1200", // patient checkup
+            "https://images.pexels.com/photos/5473246/pexels-photo-5473246.jpeg?auto=compress&cs=tinysrgb&w=1200", // medical check
+          ];
+
+          galleryImages.forEach((img, index) => {
+            document.write(
+              `<img src="${img}" alt="Hospital Operation Image ${index + 1}">`,
+            );
+          });
+        </script>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-box">
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="text" placeholder="Your Phone" required />
+          <textarea rows="4" placeholder="Your Message"></textarea>
+          <button>Submit</button>
+        </div>
+        <div class="contact-form" style="background: #eef6fb">
+          <h3>Get in Touch</h3>
+          <p>
+            <strong>Address:</strong> New Bus Station, Sohani Patti, Buxar,
+            Bihar, 802101
+          </p>
+          <p><strong>Phone:</strong> +91 8271118093</p>
+          <p><strong>Email:</strong> dksingh123sdk6653@gmail.com</p>
+          <p><strong>Emergency:</strong> +91 100</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>About A K Memorial</h3>
+          <p>
+            Providing trusted medical care with compassion, 24/7 emergency
+            support and multidisciplinary specialists.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a><br />
+          <a href="#about">About</a><br />
+          <a href="#gallery">Gallery</a><br />
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h3>Social Media</h3>
+          <div class="footer-social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        &copy; 2026 A K Memorial Hospital — All Rights Reserved
+      </div>
+    </footer>
+  </body>
+</html>
