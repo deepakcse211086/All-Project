@@ -1,14 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     <div class="main">
-        <h1>Assignement</h1>
-             <button><a href="Calculator/">Change shape and Color</a></button>   <br>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* ===== Body Background Image ===== */
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+
+        /* Background Image */
+        background-image: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Dark overlay */
+      body::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+      }
+
+      /* Container */
+      .container {
+        text-align: center;
+        color: white;
+      }
+
+      /* Heading */
+      h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        letter-spacing: 2px;
+        color: #cdccf6;
+      }
+
+      /* ===== Modern Button ===== */
+      .btn {
+        display: inline-block;
+        padding: 15px 45px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        border-radius: 50px;
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        transition: all 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Hover Effect */
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+        background: linear-gradient(45deg, #00c6ff, #0072ff);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Assignment</h1>
+      <a href="Calculator/" class="btn">Change Shape & Color</a>
     </div>
-</body>
+  </body>
 </html>
