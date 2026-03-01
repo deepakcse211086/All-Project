@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1508780709619-79562169bc64")
+        no-repeat center center/cover;
+}
+
+.container{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    padding:30px;
+    width:350px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+input[type="text"]{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.options{
+    text-align:left;
+    margin-bottom:15px;
+}
+
+.options label{
+    display:block;
+    margin:5px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#00c9a7;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#00a98f;
+}
+
+.copy-btn{
+    background:#ff6f61;
+}
+
+.copy-btn:hover{
+    background:#e85a4f;
+}
