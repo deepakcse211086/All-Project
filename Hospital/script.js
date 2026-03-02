@@ -1,19 +1,12 @@
-// // Navbar Burger Menu Toggle
-// const burger = document.querySelector('.burger');
-// const nav = document.querySelector('.nav-links');
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
 
-// burger.addEventListener('click', () => {
-//     nav.classList.toggle('active');
-// });
+let slides=document.querySelectorAll(".slide");
+let index=0;
 
-// // Smooth Scroll for Links
-// document.querySelectorAll('.nav-links a').forEach(link => {
-//     link.addEventListener('click', function(e){
-//         e.preventDefault();
-//         const target = document.querySelector(this.getAttribute('href'));
-//         target.scrollIntoView({ behavior: 'smooth' });
-//         if(nav.classList.contains('active')){
-//             nav.classList.remove('active');
-//         }
-//     });
-// });
+setInterval(()=>{
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+},4000);
