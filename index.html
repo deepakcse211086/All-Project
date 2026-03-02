@@ -1,114 +1,101 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Assignment</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Assignment</title>
 
-  <style>
-    /* ===== Body Background Image ===== */
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Poppins", sans-serif;
+<style>
 
-      background-image: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-    }
+/* ===== BODY ===== */
+body{
+  margin:0;
+  padding:40px 20px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-    /* Dark overlay */
-    body::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
+/* ===== MAIN CONTAINER ===== */
+.container{
+  max-width:1200px;
+  width:100%;
+  text-align:center;
+}
 
-    /* Container */
-    .container {
-      text-align: center;
-      color: white;
-      position: relative;
-      z-index: 1;
+/* ===== HEADING ===== */
+h1{
+  color:white;
+  font-size:42px;
+  margin-bottom:40px;
+  letter-spacing:2px;
+}
 
-      display: flex;
-      flex-direction: column;
-      gap: 25px;   /* Button spacing */
-      align-items: center;
-    }
+/* ===== GRID LAYOUT ===== */
+.container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:25px;
+}
 
-    /* Heading */
-    h1 {
-      font-size: 40px;
-      letter-spacing: 2px;
-      color: #cdccf6;
-      margin-bottom: 20px;
-    }
+/* ===== BUTTON CARD STYLE ===== */
+.btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:70px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+  font-size:18px;
+  border-radius:15px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+  transition:0.4s ease;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
 
-    /* ===== Modern Button ===== */
-    .btn {
-      display: inline-block;
-      width: 220px;
-      padding: 15px 0;
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      border-radius: 50px;
-      background: linear-gradient(45deg, #07d72d, #24e34d);
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    }
+/* Hover Animation */
+.btn:hover{
+  transform: translateY(-8px) scale(1.05);
+  background: linear-gradient(45deg,#00c6ff,#0072ff);
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
 
-    /* Hover Effect */
-    .btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-      background: linear-gradient(45deg, #00c6ff, #0072ff);
-    }
+/* Responsive */
+@media(max-width:500px){
+  h1{
+    font-size:28px;
+  }
+}
 
-    /* Responsive */
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      .btn {
-        width: 180px;
-        font-size: 16px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Assignment</h1>
-    <a href="Calculator/index.html" class="btn">Calculator</a>
-    <a href="Calendar/index.html" class="btn">Calendar</a>
-    <a href="To-Do-List/index.html" class="btn">To-Do-List</a>
-    <a href="Clock/index.html" class="btn">Clock</a>
-    <a href="Genret Password/index.html" class="btn">Generate Password</a>
-    <a href="Netflix page/index.html" class="btn">Netflix</a>
-    <a href="Notes add/index.html" class="btn">Notes Add</a>
-    <a href="QR code/index.html" class="btn">QR Code</a>
-    <a href="Notifacation/index.html" class="btn">Notifaction</a>
-    <a href="Image Search/index.html" class="btn">Image Search</a>
-    <a href="Hospital/index.html" class="btn">Hospital</a>
-    <a href="AI chatbot/index.html" class="btn">AI chatbot</a>
-    <a href="A K Hospital/index.html" class="btn">A K Hospital</a>
-    <a href="Enterprise Construction/index.html" class="btn"> Enterprise Construction</a>
-  </div>
+
+<div class="container">
+  <h1 style="grid-column: 1/-1;">Assignment</h1>
+
+  <a href="Calculator/index.html" class="btn">Calculator</a>
+  <a href="Calendar/index.html" class="btn">Calendar</a>
+  <a href="To-Do-List/index.html" class="btn">To-Do-List</a>
+  <a href="Clock/index.html" class="btn">Clock</a>
+  <a href="Genret Password/index.html" class="btn">Generate Password</a>
+  <a href="Netflix page/index.html" class="btn">Netflix</a>
+  <a href="Notes add/index.html" class="btn">Notes Add</a>
+  <a href="QR code/index.html" class="btn">QR Code</a>
+  <a href="Notifacation/index.html" class="btn">Notifaction</a>
+  <a href="Image Search/index.html" class="btn">Image Search</a>
+  <a href="Hospital/index.html" class="btn">Hospital</a>
+  <a href="AI chatbot/index.html" class="btn">AI chatbot</a>
+  <a href="A K Hospital/index.html" class="btn">A K Hospital</a>
+  <a href="Enterprise Construction/index.html" class="btn">Enterprise Construction</a>
+</div>
+
 </body>
 </html>
