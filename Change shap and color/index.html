@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shape & Color Changer</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Shape & Color Changer</h1>
+
+<div id="box" class="shape square"></div>
+
+<div class="buttons">
+<button onclick="changeShape()">Change Shape</button>
+<button onclick="changeColor()">Change Color</button>
+</div>
+
+<script>
+
+let shapes = [
+"square",
+"circle",
+"round",
+"diamond",
+"parallelogram",
+"oval",
+"star"
+];
+
+let colors = [
+"#ff4757",
+"#1e90ff",
+"#2ed573",
+"#ffa502",
+"#8e44ad",
+"#ff6b81",
+"#00cec9",
+"#e67e22"
+];
+
+let shapeIndex = 0;
+let colorIndex = 0;
+
+let box = document.getElementById("box");
+
+function changeShape(){
+
+box.className = "shape";
+
+shapeIndex++;
+
+if(shapeIndex >= shapes.length){
+shapeIndex = 0;
+}
+
+box.classList.add(shapes[shapeIndex]);
+
+}
+
+function changeColor(){
+
+colorIndex++;
+
+if(colorIndex >= colors.length){
+colorIndex = 0;
+}
+
+box.style.background = colors[colorIndex];
+
+}
+
+</script>
+
+</body>
+</html>
