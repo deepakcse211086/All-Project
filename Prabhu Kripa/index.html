@@ -1,308 +1,397 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Top Bar (Trust Strip) -->
-    <div class="top-bar">
-      <div class="container">
-        <div class="top-left">
-          <span>📞 Call Now: <a href="tel:8271118093">8271118093</a></span>
-          <span>🚚 Same Day Delivery</span>
-        </div>
-        <div class="top-right">
-          <span>📍 Mithapur, Bihar</span>
-          <span>⏰ Open: 7 AM - 8 PM</span>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Prabhu Kripa Construction Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .btn-primary {
+      background: #ff6600;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #333;
+    }
+
+    /* ===== CATEGORIES ===== */
+    .section-title {
+      text-align: center;
+      margin: 50px 0 20px;
+      font-size: 30px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 50px 50px;
+    }
+
+    .category-card {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== FEATURED PRODUCTS ===== */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 50px 60px;
+    }
+
+    .product-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .price {
+      color: #ff6600;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      padding: 10px;
+      width: 100%;
+      border: none;
+      background: #ff6600;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media(max-width:768px){
+      .hero h1 {
+        font-size: 30px;
+      }
+      
+      /* ===== PAGE TITLE ===== */
+.page-title{
+  text-align:center;
+  padding:30px 0;
+  font-size:32px;
+}
+
+/* ===== FILTER BUTTONS ===== */
+.filter-buttons{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.filter-buttons button{
+  padding:10px 20px;
+  margin:5px;
+  border:none;
+  cursor:pointer;
+  background:#ddd;
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover{
+  background:#ff6600;
+  color:white;
+}
+
+/* ===== PRODUCTS GRID ===== */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:0 50px 60px;
+}
+
+.product-card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-5px);
+}
+
+.product-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.product-card h3{
+  margin:15px 0 10px;
+}
+
+.price{
+  color:#ff6600;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.product-card button{
+  width:100%;
+  padding:10px;
+  border:none;
+  background:#ff6600;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.product-card button:hover{
+  background:#e65c00;
+}
+
+@media(max-width:768px){
+  .products{
+    padding:0 20px 40px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div>
+      <h1>Quality Construction Materials at Best Price</h1>
+      <p>Cement, Sariya, Balu, Gitti & All Construction Materials Available</p>
+      <button class="btn-primary">Shop Now</button>
+      <button class="btn-secondary">Contact Us</button>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <h2 class="section-title">Shop By Category</h2>
+
+  <section class="categories">
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53" alt="">
+      <h3>Cement</h3>
     </div>
 
-  <!-- Modern Navbar -->
-<header class="modern-navbar">
-  <div class="container">
-    <a href="#home" class="logo">PRABHU KRIPA</a>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1581090700227-4c4f50ed0a7f" alt="">
+      <h3>Sariya</h3>
     </div>
 
-    <!-- Menu -->
-    <nav class="menu" id="menu">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#why-us">Why Choose Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0" alt="">
+      <h3>Balu</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea" alt="">
+      <h3>Gitti</h3>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <h2 class="section-title">Featured Products</h2>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1581091870627-3f2b5c8cdb5e" alt="">
+      <h3>UltraTech Cement</h3>
+      <div class="price">₹380 / bag</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1598300051061-89a19c0fda9f" alt="">
+      <h3>TMT Sariya 12mm</h3>
+      <div class="price">₹65 / kg</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0" alt="">
+      <h3>River Sand (Balu)</h3>
+      <div class="price">₹2200 / trolley</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea" alt="">
+      <h3>Stone Chips (Gitti)</h3>
+      <div class="price">₹1800 / trolley</div>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+
+  <h1 class="page-title">Our Products</h1>
+
+<!-- ===== FILTER BUTTONS ===== -->
+<div class="filter-buttons">
+  <button class="active" onclick="filterProducts('all', this)">All</button>
+  <button onclick="filterProducts('cement', this)">Cement</button>
+  <button onclick="filterProducts('sariya', this)">Sariya</button>
+  <button onclick="filterProducts('balu', this)">Balu</button>
+  <button onclick="filterProducts('gitti', this)">Gitti</button>
+</div>
+
+<!-- ===== PRODUCTS GRID ===== -->
+<div class="products" id="productContainer">
+
+  <div class="product-card" data-category="cement">
+    <img src="https://images.unsplash.com/photo-1581091870627-3f2b5c8cdb5e" alt="">
+    <h3>UltraTech Cement</h3>
+    <div class="price">₹380 / bag</div>
+    <button onclick="addToCart('UltraTech Cement', 380)">Add to Cart</button>
   </div>
-</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <h1>Trusted Building Materials Supplier in Mithapur</h1>
-          <p>High Quality Sariya, Cement, Gitti & Balu at Best Price</p>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Get Price</a>
-            <a href="tel:8271118093" class="btn btn-secondary">Call Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="product-card" data-category="sariya">
+    <img src="https://images.unsplash.com/photo-1598300051061-89a19c0fda9f" alt="">
+    <h3>TMT Sariya 12mm</h3>
+    <div class="price">₹65 / kg</div>
+    <button onclick="addToCart('TMT Sariya 12mm', 65)">Add to Cart</button>
+  </div>
 
-    <!-- About Prabhu Kripa -->
-    <section id="about" class="about">
-      <div class="container about-container">
-        <div class="about-image">
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
-            alt="Prabhu Kripa Shop"
-          />
-        </div>
-        <div class="about-content">
-          <h2>About Prabhu Kripa</h2>
-          <p>
-            Prabhu Kripa ek trusted building material shop hai jo high quality
-            Sariya, Cement, Gitti, Balu aur RCC Ring provide karti hai best rate
-            par. Hum contractors aur local customers dono ko fast delivery
-            service dete hain.
-          </p>
-          <p>
-            Humara goal hai ki aapke construction ka kaam strong aur durable
-            bane high-quality material ke saath.
-          </p>
-          <a href="#contact" class="btn btn-primary">Contact Us</a>
-        </div>
-      </div>
-    </section>
+  <div class="product-card" data-category="balu">
+    <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0" alt="">
+    <h3>River Sand (Balu)</h3>
+    <div class="price">₹2200 / trolley</div>
+    <button onclick="addToCart('River Sand', 2200)">Add to Cart</button>
+  </div>
 
-    <!-- Our Products Section -->
-    <section id="products" class="products">
-      <div class="container">
-        <h2 class="section-title">Our Products</h2>
-        <div class="product-grid">
-          <!-- Product 1 -->
-          <div class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1616627563244-b4895b9d1c4e?auto=format&fit=crop&w=400&q=80"
-              alt="Sariya"
-            />
-            <h3>Sariya</h3>
-            <p>Strong & Durable Steel Bars for Construction.</p>
-            <a href="#contact" class="btn btn-primary">Get Quote</a>
-          </div>
-          <!-- Product 2 -->
-          <div class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1581092795361-3f5295a1e2de?auto=format&fit=crop&w=400&q=80"
-              alt="Cement"
-            />
-            <h3>Cement</h3>
-            <p>High Quality Cement for Strong Structures.</p>
-            <a href="#contact" class="btn btn-primary">Get Quote</a>
-          </div>
-          <!-- Product 3 -->
-          <div class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1605223219647-cf09d8a37e18?auto=format&fit=crop&w=400&q=80"
-              alt="Gitti"
-            />
-            <h3>Gitti</h3>
-            <p>Premium Quality Stone Chips for Construction.</p>
-            <a href="#contact" class="btn btn-primary">Get Quote</a>
-          </div>
-          <!-- Product 4 -->
-          <div class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1592928307446-c3b6a7f5f0f4?auto=format&fit=crop&w=400&q=80"
-              alt="Balu"
-            />
-            <h3>Balu</h3>
-            <p>Fine River Sand for Construction and Plastering.</p>
-            <a href="#contact" class="btn btn-primary">Get Quote</a>
-          </div>
-          <!-- Product 5 -->
-          <div class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1595921144955-f0e7e90b40b5?auto=format&fit=crop&w=400&q=80"
-              alt="RCC Ring"
-            />
-            <h3>RCC Ring</h3>
-            <p>Strong RCC Drainage Rings for Durability.</p>
-            <a href="#contact" class="btn btn-primary">Get Quote</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="product-card" data-category="gitti">
+    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea" alt="">
+    <h3>Stone Chips (Gitti)</h3>
+    <div class="price">₹1800 / trolley</div>
+    <button onclick="addToCart('Stone Chips', 1800)">Add to Cart</button>
+  </div>
 
-    <!-- Why Choose Us Section -->
-    <section id="why-us" class="why-us">
-      <div class="container">
-        <h2 class="section-title">Why Choose Prabhu Kripa?</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🏆</div>
-            <h3>High Quality Material</h3>
-            <p>
-              Hum hamesha high quality Sariya, Cement, Gitti aur Balu provide
-              karte hain.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">💰</div>
-            <h3>Best Price Guarantee</h3>
-            <p>
-              Competitive rates for all building materials without compromising
-              quality.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🚚</div>
-            <h3>Fast Delivery</h3>
-            <p>
-              Local contractors aur customers ko timely delivery provide karte
-              hain.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🤝</div>
-            <h3>Trusted by Customers</h3>
-            <p>
-              Humare regular customers hamesha hamare service aur products ko
-              trust karte hain.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <!-- Call To Action Section -->
-    <section id="cta" class="cta">
-      <div class="container cta-container">
-        <h2>Need Material for Your Construction?</h2>
-        <p>
-          Contact Prabhu Kripa today and get the best rates for Sariya, Cement,
-          Gitti, Balu & RCC Ring.
-        </p>
-        <div class="cta-buttons">
-          <a href="tel:8271118093" class="btn btn-primary">Call Now</a>
-          <a
-            href="https://wa.me/918271118093"
-            target="_blank"
-            class="btn btn-secondary"
-            >WhatsApp Now</a
-          >
-        </div>
-      </div>
-    </section>
 
-    <!-- Contact & Location Section -->
-    <section id="contact" class="contact">
-      <div class="container contact-container">
-        <div class="contact-form">
-          <h2>Contact Prabhu Kripa</h2>
-          <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              required
-            />
-            <input
-              type="text"
-              name="material"
-              placeholder="Material Required"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              required
-            ></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-        <div class="contact-info">
-          <h2>Our Location</h2>
-          <p>📍 Address: Mithapur, Bihar, PIN 802101</p>
-          <p>📞 Phone: <a href="tel:8271118093">8271118093</a></p>
-          <p>
-            🟢 WhatsApp:
-            <a href="https://wa.me/918271118093" target="_blank">Chat Now</a>
-          </p>
-          <div class="map">
-            <iframe
-              src="https://www.google.com/maps?q=Mithapur,+Buxar,+Bihar&output=embed"
-              width="100%"
-              height="250"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+  <script>
+    // Basic cart alert demo
+    const buttons = document.querySelectorAll(".product-card button");
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer-column">
-          <h3>About Prabhu Kripa</h3>
-          <p>
-            Trusted building material supplier in Mithapur. We provide Sariya,
-            Cement, Gitti, Balu & RCC Ring at best prices with fast delivery.
-          </p>
-        </div>
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#why-us">Why Choose Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Products</h3>
-          <ul>
-            <li><a href="#products">Sariya</a></li>
-            <li><a href="#products">Cement</a></li>
-            <li><a href="#products">Gitti</a></li>
-            <li><a href="#products">Balu</a></li>
-            <li><a href="#products">RCC Ring</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Contact Info</h3>
-          <p>📍 Ahiroli chok, Bihar, PIN 802101</p>
-          <p>📞 <a href="tel:8271118093">+91 78708 13780</a></p>
-          <p>
-            🟢
-            <a href="https://wa.me/918271118093" target="_blank"
-              >WhatsApp Now</a
-            >
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Prabhu Kripa | All Rights Reserved</p>
-      </div>
-    </footer>
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        alert("Product added to cart!");
+      });
+    });
 
-    <script src="script.js"></script>
-  </body>
+    /* ===== FILTER FUNCTION ===== */
+function filterProducts(category, btn){
+
+  const products = document.querySelectorAll(".product-card");
+  const buttons = document.querySelectorAll(".filter-buttons button");
+
+  buttons.forEach(button => button.classList.remove("active"));
+  btn.classList.add("active");
+
+  products.forEach(product => {
+    if(category === "all" || product.dataset.category === category){
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+/* ===== ADD TO CART FUNCTION ===== */
+function addToCart(name, price){
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.push({name, price});
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert(name + " added to cart!");
+}
+  </script>
+
+</body>
 </html>
